@@ -1,10 +1,12 @@
 <?php
 class Funcionario{
+
+    // public é a caracteristica da variavel
     public $nome;
     public $salario;
     public $previdencia;
     public $descontos;
-
+    // construct chama as variaveis
     function __construct($nome, $salario,$previdencia){
         $this ->nome= $nome;
         $this ->salario= $salario;
