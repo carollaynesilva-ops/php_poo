@@ -6,7 +6,7 @@ class pessoa
     public $altura;
     public $nome;
     public $imc;
-
+// o this usa pra usar uma variavel da classe
     function __construct($nome, $peso, $altura)
     {
         $this->peso = $peso;
