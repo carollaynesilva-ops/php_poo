@@ -14,6 +14,11 @@ class Filme{
         $this-> saldo = $this->saldo+$valor;
     }
 }
+$filme= new Filme("Como eu era antes de você",10);
+$filme->incrementarSaldo(5);
+
+echo "Nome do filme: $filme->nome<br>";
+echo "Saldo disponível: $filme->saldo";
 
 
 ?>
