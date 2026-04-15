@@ -6,6 +6,8 @@ class Conta
     private $numero;
     private $saldo;
 
+
+
     //Método Construtor
     function __construct($numero, $saldo)
     {
@@ -13,6 +15,12 @@ class Conta
         $this->saldo = $saldo;
     
     }
+
+
+
+
+
+
     //MÉTODOS GETTERS E SETTERS
     public function getNumero(){
         return $this->numero;
@@ -24,6 +32,10 @@ class Conta
     protected function setSaldo($novoSaldo){
         $this->saldo=$novoSaldo;
     }
+
+
+
+
 
     //Métodos
     function creditar($valor)
@@ -45,6 +57,8 @@ class Conta
     }
 }
 
+
+
 class Poupanca extends Conta
 {
     protected $juros;
@@ -63,9 +77,15 @@ class Poupanca extends Conta
 
     function atualizarJuros()
     {
-        $this->saldo = $this->saldo * (1 + $this->juros);
+        $novoSaldo=$this->getSaldo()*(1+$this->juros);
+        $this->setSaldo($novoSaldo);
+       
     }
 }
+
+
+
+
 
 $conta= new Conta(1, 150);
 $conta->creditar(50);
