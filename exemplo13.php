@@ -34,7 +34,14 @@ class Conta{
 
 //É UMA SUBCLASSE
 class Poupanca extends Conta{
-    public $juros = 0.05;
+    public $juros ;
+
+    function __construct($numero, $saldo, $juros)
+    {
+        $this->numero=$numero;
+        $this->saldo=$saldo;
+        $this->juros=$juros;
+    }
 
 
     function atualizarJuros(){
